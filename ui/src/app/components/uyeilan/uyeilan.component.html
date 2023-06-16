@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>{{uye?.KullaniciAdi}} Adlı Üyeye Ait İlanlar</h1>
+  <h2 style="color: red;" *ngIf="ilanlar?.length==0">Henüz Bu Üye İlan Eklemedi</h2>
+  <div *ngFor="let ilan of ilanlar">
+    <h2>{{ ilan.Baslik }}</h2>
+    <p>
+      <b>Kategori:</b> {{ ilan.KategoriAdi }}&nbsp;&nbsp;
+      <b>Tarih:</b> {{ ilan.Tarih }}&nbsp;&nbsp;
+      <b>Yazan:</b> {{ ilan.UyeKadi }}&nbsp;&nbsp;
+      <a href="#" [routerLink]="['/ilan/', ilan.ilanId]">İlan Oku</a>
+    </p>
+    <hr>
+  </div>
+</div>
